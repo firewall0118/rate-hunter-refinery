@@ -1,0 +1,90 @@
+<%#= render 'refinery/content_page'%>
+
+<div id="main">
+  <div class="wrapper">
+    <div class="clear fadeIn animated rate-header">
+      <div class="half column">
+        <%= image_tag('rate-hunter-logo.png', :class => 'logo') %>
+      </div>
+
+      <div class="half column careers desktop" style="text-align:right">
+        <a href="mailto:info@ratehunter.com?subject=Interested in learning more about ratehunter.com" style="color:white">jobs@ratehunter.com</a>
+      </div>
+    </div>
+    <section class="text-center table content first-section">
+      <div class="table-cell">
+        <h1 class="fadeInUp animated">Hunt for the lowest rate</h1>
+        <div class="fadeInUp animated"><%= render_page_part(@page, 'Rate Hunter Comment')%></div>
+        <!-- Begin MailChimp Signup Form -->
+        <div class="fadeInUp animated" id="mc_embed_signup">
+          <form action="//ratehunter.us12.list-manage.com/subscribe/post?u=8f10a42f460c2ee92850aafe9&amp;id=f8817f0514" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+              <label for="mce-EMAIL"><%= render_page_part(@page, 'Sign Up Comment')%></label>
+              <div class="form-container">
+                <input type="email" value="" name="EMAIL" class="email shadow" id="mce-EMAIL" placeholder="Enter your email address" required="">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_c05d7a7f85e260e7212d2c11d_32e27108f6" tabindex="-1" value="">
+                </div>
+
+                <input type="submit" value="NOTIFY ME" name="subscribe" id="mc-embedded-subscribe" class="button shadow">
+              </div>
+
+              <small class="fadeIn animated">(We will not share your email.)</small>
+            </div>
+          </form>
+        </div>
+        <!--End mc_embed_signup-->
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row block-gap">
+    <div class="who-we-title"><%= render_page_part(@page, 'Who We Are')%> </div>
+    <div class="who-we-body"><%= render_page_part(@page, 'Who We Are Contents')%></div>
+  </div>
+  <div class="row block-gap current-job">
+    <p> CURRENT JOB OPENINGS AT RATEHUNTER</p>
+  </div>
+
+  <div class="row third-content-title">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class=" third-content-left"> <%= render_page_part(@page, 'Engineer')%></div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <a style="color:black" href="https://rate-hunter.workable.com/jobs/213675"> Ruby on Rails </a>
+    </div>
+  </div>
+
+  <div class="row forth-content-title block-gap">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 third-content-left">
+    <div class=" third-content-left"> <%= render_page_part(@page, 'Design & Human')%></div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <p class="" style="color:black"> Senior </p>
+    </div>
+  </div>
+
+  <div class="row forth-content-title block-gap">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box">
+      <div class="inner-box valuation-box fair-left ">
+        <p class="valuation-title-fair">Send us your application</p><br>
+        <div class="block-content"> <%= render_page_part(@page, 'Send Us Application')%></div><br>
+        <span class="apply ">Apply Now</span>
+        <span class="arrow"></span>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box">
+      <div class="inner-box valuation-box fair-right">
+        <p class="valuation-title-fair">University Students</p><br>
+        <div class="block-content"> <%= render_page_part(@page, 'University Students')%></div><br>
+        <span class="apply">Apply Now</span>
+        <span class="glyphicon glyphicon-arrow-right arrow"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'footer'%>
