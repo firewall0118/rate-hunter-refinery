@@ -28,6 +28,7 @@ production:
   encoding: unicode
   adapter:  postgresql
   host:     127.0.0.1
+  port: 5432
   encoding: unicode
   database: rate_production
   pool:     5
