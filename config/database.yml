@@ -11,7 +11,7 @@ development:
   pool:     5
   username: postgres
   password: postgres
-  template: template0
+
 
 test:
   adapter:  postgresql
@@ -27,11 +27,10 @@ production:
   adapter:  postgresql  
   encoding: unicode
   adapter:  postgresql
-  host:     127.0.0.1
-  port: 5432
+  host:     localhost
   encoding: unicode
   database: rate_production
   pool:     5
   username: postgres
   password: postgres
-  template: template0
+  
