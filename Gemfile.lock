@@ -180,9 +180,8 @@ GEM
       polyglot (>= 0.3.1)
     truncate_html (0.9.3)
     tzinfo (0.3.47)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
     will_paginate (3.0.7)
@@ -191,7 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   font-awesome-sass
   jquery-rails
   pg
@@ -200,7 +199,7 @@ DEPENDENCIES
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
   sass
-  sass-rails (~> 3.2.3)
+  sass-rails
   uglifier (>= 1.0.3)
 
 BUNDLED WITH
