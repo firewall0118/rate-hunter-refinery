@@ -160,7 +160,7 @@ GEM
       refinerycms-core (= 2.1.5)
     routing-filter (0.3.1)
       actionpack
-    sass (3.4.21)
+    sass (3.2.19)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -191,14 +191,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  font-awesome-sass
+  font-awesome-sass (~> 4.5.0)
   jquery-rails
   pg
   pry-rails
   rails (= 3.2.15)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
-  sass
+  sass (~> 3.2.0)
   sass-rails
   uglifier (>= 1.0.3)
 

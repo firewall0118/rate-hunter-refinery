@@ -4,8 +4,9 @@ gem 'rails', '3.2.15'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.5.0'
 gem 'jquery-rails'
+
 
 group :development, :test do
   gem 'pg'
@@ -17,7 +18,7 @@ end
 # in production environments by default.
 gem 'coffee-rails'
 gem 'sass-rails'
-gem 'sass'
+gem 'sass', '~> 3.2.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
