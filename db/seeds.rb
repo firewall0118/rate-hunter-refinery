@@ -40,3 +40,6 @@ home_page.parts.create({
   body: 'DESIGN & HUMAN EXPERIENCE'
 })          
   
+
+# Added by Refinery CMS Jobs extension
+Refinery::Jobs::Engine.load_seed

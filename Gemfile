@@ -6,10 +6,10 @@ gem 'rails', '3.2.15'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'jquery-rails'
+gem 'pg'
 
 
 group :development, :test do
-  gem 'pg'
   gem 'pry-rails'
 end
 
@@ -27,7 +27,6 @@ gem 'uglifier', '>= 1.0.3'
 
 
 group :production do
-  gem 'pg'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -53,3 +52,4 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
+gem 'refinerycms-jobs', :path => 'vendor/extensions'

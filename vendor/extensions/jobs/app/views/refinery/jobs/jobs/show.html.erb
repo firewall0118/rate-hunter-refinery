@@ -1,0 +1,29 @@
+<% content_for :body_content_title do %>
+  <%= @job.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <p>
+      <%=raw @job.content %>
+    </p>
+  </section>
+  <section>
+    <p>
+      <%=raw @job.city %>
+    </p>
+  </section>
+  <section>
+    <p>
+      <%=raw @job.price %>
+    </p>
+  </section>
+  <section>
+    <p>
+      <%=raw @job.date %>
+    </p>
+  </section>
+<% end %>
+
+
+<%= render '/refinery/content_page' %>
