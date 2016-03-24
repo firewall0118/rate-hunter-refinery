@@ -3,7 +3,7 @@ require 'refinerycms-core'
 module Refinery
   autoload :JobsGenerator, 'generators/refinery/jobs_generator'
 
-  module Jobs
+  module Jobs                                         
     require 'refinery/jobs/engine'
 
     class << self
@@ -19,3 +19,4 @@ module Refinery
     end
   end
 end
+                                          
