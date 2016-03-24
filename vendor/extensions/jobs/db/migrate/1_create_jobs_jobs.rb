@@ -8,6 +8,7 @@ class CreateJobsJobs < ActiveRecord::Migration
       t.text :price
       t.integer :user_id
       t.datetime :date
+      t.text :job_link
       t.integer :position
 
       t.timestamps

@@ -5,8 +5,8 @@ class CreateJobsJobs < ActiveRecord::Migration
     create_table :refinery_jobs do |t|
       t.string :title
       t.text :content
-      t.text :city
-      t.text :price
+      t.string :city
+      t.string :price
       t.integer :user_id
       t.datetime :date
       t.integer :position

@@ -56,13 +56,7 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
       <!-- <a style="color:black" href="https://rate-hunter.workable.com/jobs/213675"> Ruby on Rails </a> -->
-      <% Refinery::Jobs::Job.find_each do |job| %>
-        <h3><%= link_to job.title, "https://rate-hunter.workable.com/jobs/213675" %></h3>
-        <p><%= raw job.price %></p>
-        <p><%= raw job.date %></p>
-        <p><%= raw job.city %></p>
-        <p><%= raw job.content %></p>
-      <% end %>
+      <%= render partial: 'refinery/jobs/job', collection: @jobs %>
     </div>
   </div>
 

@@ -11,15 +11,26 @@
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,
-                :fields => [:content, :city, :price],
+                :fields => [:content],
                 :object => "jobs/job" -%>
   </div>
 
   <div class='field'>
+    <%= f.label :city -%>
+    <%= f.text_field :city -%>
+  </div>
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.text_field :price -%>
+  </div>
+  <div class='field'>
+    <%= f.label :job_link -%>
+    <%= f.text_field :job_link -%>
+  </div>
+  <div class='field'>
     <%= f.label :user_id -%>
     <%= f.number_field :user_id -%>
   </div>
-
   <div class='field'>
     <%= f.label :date -%>
     <%= f.datetime_select :date -%>
