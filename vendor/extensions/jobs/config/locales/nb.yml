@@ -1,10 +1,27 @@
 nb:
   refinery:
     plugins:
+      categories:
+        title: Categories
       jobs:
         title: Jobs
     jobs:
       admin:
+        categories:
+          actions:
+            create_new: Lag en ny Category
+            reorder: Endre rekkefølgen på Categories
+            reorder_done: Ferdig å endre rekkefølgen Categories
+          records:
+            title: Categories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Categories enda. Klikk på "Lag en ny Category"
+              for å legge til din første category.
+          category:
+            view_live_html: Vis hvordan denne category ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne category
+            delete: Fjern denne category permanent
         jobs:
           actions:
             create_new: Lag en ny Job
@@ -13,20 +30,28 @@ nb:
           records:
             title: Jobs
             sorry_no_results: Beklager! Vi fant ikke noen resultater.
-            no_items_yet: Det er ingen Jobs enda. Klikk på "Lag en ny Job" for å legge til din første job.
+            no_items_yet: Det er ingen Jobs enda. Klikk på "Lag en ny Job" for å legge
+              til din første job.
           job:
-            view_live_html: Vis hvordan denne job ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            view_live_html: Vis hvordan denne job ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
             edit: Rediger denne job
             delete: Fjern denne job permanent
+      categories:
+        show:
+          other: Andre Categories
       jobs:
         show:
           other: Andre Jobs
   activerecord:
     attributes:
-      'refinery/jobs/job':
+      refinery/jobs/category:
         title: Title
-        content: Content
-        city: City
-        price: Price
+      refinery/jobs/job:
+        title: Title
+        description: Description
+        location: Location
+        salary: Salary
+        category_id: Category
         user_id: User
-        date: Date
+        job_link: Job Link

@@ -1,10 +1,27 @@
 nl:
   refinery:
     plugins:
+      categories:
+        title: Categories
       jobs:
         title: Jobs
     jobs:
       admin:
+        categories:
+          actions:
+            create_new: Nieuwe Category toevoegen
+            reorder: De volgorde van de Categories wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Category-volgorde
+          records:
+            title: Categories
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Categories. Druk op 'Nieuwe Category toevoegen'
+              om de eerste toe te voegen.
+          category:
+            view_live_html: Deze category op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze category
+            delete: Deze category definitief verwijderen
         jobs:
           actions:
             create_new: Nieuwe Job toevoegen
@@ -13,20 +30,28 @@ nl:
           records:
             title: Jobs
             sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Jobs. Druk op 'Nieuwe Job toevoegen' om de eerste toe te voegen.
+            no_items_yet: Er zijn nog geen Jobs. Druk op 'Nieuwe Job toevoegen' om
+              de eerste toe te voegen.
           job:
-            view_live_html: Deze job op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            view_live_html: Deze job op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
             edit: Bewerk deze job
             delete: Deze job definitief verwijderen
+      categories:
+        show:
+          other: Andere Categories
       jobs:
         show:
           other: Andere Jobs
   activerecord:
     attributes:
-      'refinery/jobs/job':
+      refinery/jobs/category:
         title: Title
-        content: Content
-        city: City
-        price: Price
+      refinery/jobs/job:
+        title: Title
+        description: Description
+        location: Location
+        salary: Salary
+        category_id: Category
         user_id: User
-        date: Date
+        job_link: Job Link

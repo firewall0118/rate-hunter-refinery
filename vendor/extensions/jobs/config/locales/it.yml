@@ -1,10 +1,26 @@
 it:
   refinery:
     plugins:
+      categories:
+        title: Categories
       jobs:
         title: Jobs
     jobs:
       admin:
+        categories:
+          actions:
+            create_new: Aggiungi Nuovo Category
+            reorder: Riordina Categories
+            reorder_done: Termina il Riordino di Categories
+          records:
+            title: Categories
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Categories. Clicca "Aggiungi Nuovo Category"
+              per aggiungere il tuo primo category.
+          category:
+            view_live_html: Guarda live questo category <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo category
+            delete: Rimuovi per sempre questo category
         jobs:
           actions:
             create_new: Aggiungi Nuovo Job
@@ -12,21 +28,28 @@ it:
             reorder_done: Termina il Riordino di Jobs
           records:
             title: Jobs
-            sorry_no_results: "Spiacenti! Nessun risultato trovato"
-            no_items_yet: Non ci sono ancora Jobs. Clicca "Aggiungi Nuovo Job" per aggiungere il tuo primo job.
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Jobs. Clicca "Aggiungi Nuovo Job" per
+              aggiungere il tuo primo job.
           job:
             view_live_html: Guarda live questo job <br/><em>(apre una nuova finestra)</em>
             edit: Modifica questo job
             delete: Rimuovi per sempre questo job
+      categories:
+        show:
+          other: Altri Categories
       jobs:
         show:
           other: Altri Jobs
   activerecord:
     attributes:
-      'refinery/jobs/job':
+      refinery/jobs/category:
         title: Title
-        content: Content
-        city: City
-        price: Price
+      refinery/jobs/job:
+        title: Title
+        description: Description
+        location: Location
+        salary: Salary
+        category_id: Category
         user_id: User
-        date: Date
+        job_link: Job Link

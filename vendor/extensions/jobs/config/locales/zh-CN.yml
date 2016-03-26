@@ -1,10 +1,25 @@
 zh-CN:
   refinery:
     plugins:
+      categories:
+        title: Categories
       jobs:
         title: Jobs
     jobs:
       admin:
+        categories:
+          actions:
+            create_new: 建立新的 Category
+            reorder: 对 Categories 重新排序
+            reorder_done: 对 Categories 的重新排序结束
+          records:
+            title: Categories
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Categories . 点击 "Add New Category" 创建一个category.
+          category:
+            view_live_html: 查看 category 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 category
+            delete: 永久删除 category
         jobs:
           actions:
             create_new: 建立新的 Job
@@ -12,23 +27,27 @@ zh-CN:
             reorder_done: 对 Jobs 的重新排序结束
           records:
             title: Jobs
-            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
-
-            # There are no Jobs yet. Click "Add New Job" to add your first job.
+            sorry_no_results: 对不起，未找到结果。
             no_items_yet: 目前没有 Jobs . 点击 "Add New Job" 创建一个job.
           job:
             view_live_html: 查看 job 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 job
             delete: 永久删除 job
+      categories:
+        show:
+          other: 其他 Categories
       jobs:
         show:
           other: 其他 Jobs
   activerecord:
     attributes:
-      'refinery/jobs/job':
+      refinery/jobs/category:
         title: Title
-        content: Content
-        city: City
-        price: Price
+      refinery/jobs/job:
+        title: Title
+        description: Description
+        location: Location
+        salary: Salary
+        category_id: Category
         user_id: User
-        date: Date
+        job_link: Job Link

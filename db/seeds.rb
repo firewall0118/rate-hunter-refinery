@@ -42,7 +42,12 @@ home_page.parts.create({
   
 
 # Added by Refinery CMS Jobs extension
-Refinery::Jobs::Engine.load_seed
+
 
 # Added by Refinery CMS Inquiries engine
 Refinery::Inquiries::Engine.load_seed
+
+# Added by Refinery CMS Categories extension
+
+# Added by Refinery CMS Jobs extension
+Refinery::Jobs::Engine.load_seed

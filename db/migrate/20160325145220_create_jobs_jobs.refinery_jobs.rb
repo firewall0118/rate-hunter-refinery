@@ -4,11 +4,12 @@ class CreateJobsJobs < ActiveRecord::Migration
   def up
     create_table :refinery_jobs do |t|
       t.string :title
-      t.text :content
-      t.string :city
-      t.string :price
+      t.text :description
+      t.string :location
+      t.string :salary
+      t.integer :category_id
       t.integer :user_id
-      t.datetime :date
+      t.string :job_link
       t.integer :position
 
       t.timestamps

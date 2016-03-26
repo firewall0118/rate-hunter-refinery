@@ -11,29 +11,33 @@
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,
-                :fields => [:content],
+                :fields => [:description],
                 :object => "jobs/job" -%>
   </div>
 
   <div class='field'>
-    <%= f.label :city -%>
-    <%= f.text_field :city -%>
+    <%= f.label :location -%>
+    <%= f.text_field :location -%>
   </div>
+
   <div class='field'>
-    <%= f.label :price -%>
-    <%= f.text_field :price -%>
+    <%= f.label :salary -%>
+    <%= f.text_field :salary -%>
   </div>
+
   <div class='field'>
-    <%= f.label :job_link -%>
-    <%= f.text_field :job_link -%>
+    <%= f.label :category -%>
+    <%= f.collection_select :category_id, Refinery::Jobs::Category.all, :id, :title -%>
   </div>
+
   <div class='field'>
     <%= f.label :user_id -%>
     <%= f.number_field :user_id -%>
   </div>
+
   <div class='field'>
-    <%= f.label :date -%>
-    <%= f.datetime_select :date -%>
+    <%= f.label :job_link -%>
+    <%= f.text_field :job_link -%>
   </div>
 
   <%= render '/refinery/admin/form_actions', :f => f,

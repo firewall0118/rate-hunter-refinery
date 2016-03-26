@@ -51,12 +51,10 @@
   </div>
 
   <div class="row third-content-title">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-      <div class=" third-content-left"> <%= render_page_part(@page, 'Engineer')%></div>
+    <div class="col-sm-6">
+      <%= render @categories %>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-      <!-- <a style="color:black" href="https://rate-hunter.workable.com/jobs/213675"> Ruby on Rails </a> -->
-      <%= render partial: 'refinery/jobs/job', collection: @jobs %>
+    <div class="col-sm-6" id="home-category-jobs">
     </div>
   </div>
 
@@ -67,16 +65,16 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
       <p class="" style="color:black"> Senior </p>
     </div>
-  </div>                                                      
+  </div>
 
   <div class="row forth-content-title block-gap">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box">
       <div class="inner-box valuation-box fair-left ">
-        <p class="valuation-title-fair">Send us your application</p><br>          
+        <p class="valuation-title-fair">Send us your application</p><br>
         <div class="block-content"> <%= render_page_part(@page, 'Send Us Application')%></div><br>
         <span class="apply">Apply Now</span>
         <span class="arrow"></span>
-      </div>                      
+      </div>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box">

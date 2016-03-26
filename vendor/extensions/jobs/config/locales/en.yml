@@ -1,10 +1,26 @@
 en:
   refinery:
     plugins:
+      categories:
+        title: Categories
       jobs:
         title: Jobs
     jobs:
       admin:
+        categories:
+          actions:
+            create_new: Add New Category
+            reorder: Reorder Categories
+            reorder_done: Done Reordering Categories
+          records:
+            title: Categories
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Categories yet. Click "Add New Category" to
+              add your first category.
+          category:
+            view_live_html: View this category live <br/><em>(opens in a new window)</em>
+            edit: Edit this category
+            delete: Remove this category forever
         jobs:
           actions:
             create_new: Add New Job
@@ -13,20 +29,27 @@ en:
           records:
             title: Jobs
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Jobs yet. Click "Add New Job" to add your first job.
+            no_items_yet: There are no Jobs yet. Click "Add New Job" to add your first
+              job.
           job:
             view_live_html: View this job live <br/><em>(opens in a new window)</em>
             edit: Edit this job
             delete: Remove this job forever
+      categories:
+        show:
+          other: Other Categories
       jobs:
         show:
           other: Other Jobs
   activerecord:
     attributes:
-      'refinery/jobs/job':
+      refinery/jobs/category:
         title: Title
-        content: Content
-        city: City
-        price: Price
+      refinery/jobs/job:
+        title: Title
+        description: Description
+        location: Location
+        salary: Salary
+        category_id: Category
         user_id: User
-        date: Date
+        job_link: Job Link

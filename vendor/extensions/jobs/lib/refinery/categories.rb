@@ -3,8 +3,8 @@ require 'refinerycms-core'
 module Refinery
   autoload :JobsGenerator, 'generators/refinery/jobs_generator'
 
-  module Jobs
-    require 'refinery/jobs/engine'
+  module Categories
+    require 'refinery/categories/engine'
 
     class << self
       attr_writer :root

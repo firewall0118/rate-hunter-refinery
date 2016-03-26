@@ -1,11 +1,27 @@
 es:
   refinery:
     plugins:
+      categories:
+        title: Categories
       jobs:
         title: Jobs
-#        article: masculino/femenino
     jobs:
       admin:
+        categories:
+          actions:
+            create_new: Crear nuevo category
+            reorder: Reordenar categories
+            reorder_done: Reordenación de categories completada
+          records:
+            title: Categories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay categories todavía. Pulsa en "Crear nuevo Category"
+              para crear tu primer category.
+          category:
+            view_live_html: Ver este category como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este category
+            delete: Borrar este category para siempre
         jobs:
           actions:
             create_new: Crear nuevo job
@@ -14,20 +30,28 @@ es:
           records:
             title: Jobs
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay jobs todavía. Pulsa en "Crear nuevo Job" para crear tu primer job.
+            no_items_yet: No hay jobs todavía. Pulsa en "Crear nuevo Job" para crear
+              tu primer job.
           job:
-            view_live_html: Ver este job como abierto al público <br/><em>(abre en ventana nueva)</em>
+            view_live_html: Ver este job como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
             edit: Editar este job
             delete: Borrar este job para siempre
+      categories:
+        show:
+          other: Otros categories
       jobs:
         show:
           other: Otros jobs
   activerecord:
     attributes:
-      'refinery/jobs/job':
+      refinery/jobs/category:
         title: Title
-        content: Content
-        city: City
-        price: Price
+      refinery/jobs/job:
+        title: Title
+        description: Description
+        location: Location
+        salary: Salary
+        category_id: Category
         user_id: User
-        date: Date
+        job_link: Job Link
