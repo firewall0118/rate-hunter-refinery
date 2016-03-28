@@ -50,23 +50,28 @@
 
   </div>
 
-  <div class="row third-content-title">
-    <div class="col-sm-6">
-      <%= render @categories %>
+  <%#= render @categories %>
+  <% @categories.each do |category| %>
+    <div class="row forth-content-title block-gap">
+      <div class="third-content-left">
+        <div class="col-xs-6">
+          <h3><%= category.title %></h3>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <% @jobs.each do |job| %>
+          <% if job.category_id == category.id %>
+            <%#= render partial: 'refinery/jobs/jobs/job', collection: @jobs %>
+            <h3><a href="<%= job.job_link %>" target="_blank"><%= job.title %></a></h3>
+            <p><%= job.salary %></p>
+            <p><%= job.location %></p>
+            <p><%= raw job.description %></p>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-    <div class="col-sm-6" id="home-category-jobs">
-    </div>
-  </div>
-
-  <div class="row forth-content-title block-gap">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 third-content-left">
-    <div class=" third-content-left"> <%= render_page_part(@page, 'Design & Human')%></div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-      <p class="" style="color:black"> Senior </p>
-    </div>
-  </div>
-
+  <% end %>
+  
   <div class="row forth-content-title block-gap">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box">
       <div class="inner-box valuation-box fair-left ">
@@ -88,3 +93,10 @@
   </div>
 </div>
 <%= render 'footer'%>
+
+<!--<script type="text/javascript">
+  $.ajax({
+    url: "<%#= refinery.jobs_jobs_category_path(@categories.second) %>",
+    dataType: 'script'
+  })
+</script>-->

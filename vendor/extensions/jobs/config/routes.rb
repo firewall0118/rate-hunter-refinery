@@ -15,9 +15,7 @@ Refinery::Core::Engine.routes.draw do
       end
     end
   end
-
-
-  # Frontend routes
+  #Frontend routes
   namespace :jobs do
     resources :categories, :only => [:index, :show] do
       get :jobs, on: :member
@@ -34,5 +32,4 @@ Refinery::Core::Engine.routes.draw do
       end
     end
   end
-
 end

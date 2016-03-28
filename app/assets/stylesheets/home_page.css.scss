@@ -90,7 +90,7 @@ small {
   color: #2bb673;
   font-size: 25px;
   padding: 43px 0px;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  // border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .third-content-title{
   margin-top:35px;
@@ -100,8 +100,15 @@ small {
   color: rgba(0,0,0,0.2);
   font-size: 20px;
 }
+.category-title{
+  color: rgba(0,0,0,0.2);
+  &:hover, &:focus{
+    color: #2bb673;
+    text-decoration: none;
+  }
+}
 .forth-content-title{
-  margin-top:53px;
+  margin-top:-15px;
   border-top: 1px solid rgba(0,0,0,0.2);
   padding: 43px 0px;
 }

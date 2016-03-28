@@ -4,5 +4,4 @@ Refinery::Jobs::CategoriesController.class_eval do
     @category = Refinery::Jobs::Category.find params[:id]
     @jobs = @category.jobs
   end
-
 end

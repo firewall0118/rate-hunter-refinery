@@ -34,11 +34,7 @@ home_page.parts.create({
 home_page.parts.create({
   title: 'Engineer',
   body: 'Engineering'
-})
-home_page.parts.create({
-  title: 'Design & Human',
-  body: 'DESIGN & HUMAN EXPERIENCE'
-})          
+})        
   
 
 # Added by Refinery CMS Jobs extension
