@@ -1,4 +1,12 @@
 <h3><a href="<%= job.job_link %>" target="_blank"><%= job.title %></a></h3>
-<p><%= job.salary %></p>
-<p><%= job.location %></p>
-<p><%= raw job.description %></p>
+<% if (job.salary_end_cents == 0) %>
+  <p class="job-title"><%= humanized_money_with_symbol job.salary %></p>
+<% else %>
+  <p class="job-title">
+  <%= humanized_money_with_symbol job.salary %> ~
+  <%= humanized_money job.salary_end %><p>
+<% end %>
+<div class="job-title">
+  <%= raw job.description %>
+</div>
+<p class="job-title"><%= job.location %></p>

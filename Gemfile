@@ -7,6 +7,7 @@ gem 'rails', '3.2.15'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'pg'
+gem 'money-rails'
 
 
 group :development, :test do

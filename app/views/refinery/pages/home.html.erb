@@ -61,11 +61,7 @@
       <div class="col-xs-6">
         <% @jobs.each do |job| %>
           <% if job.category_id == category.id %>
-            <%#= render partial: 'refinery/jobs/jobs/job', collection: @jobs %>
-            <h3><a href="<%= job.job_link %>" target="_blank"><%= job.title %></a></h3>
-            <p><%= job.salary %></p>
-            <p><%= job.location %></p>
-            <p><%= raw job.description %></p>
+            <%= render partial: 'refinery/jobs/jobs/job', locals: {job: job} %>
           <% end %>
         <% end %>
       </div>

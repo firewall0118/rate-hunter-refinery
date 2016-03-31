@@ -24,7 +24,7 @@
   <section>
     <h1>Salary</h1>
     <p>
-      <%=raw @job.salary %>
+      <%=humanized_money_with_symbol @job.salary %>
     </p>
   </section>
   <section>

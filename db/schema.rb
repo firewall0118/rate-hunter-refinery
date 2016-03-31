@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160326150434) do
+ActiveRecord::Schema.define(:version => 20160330174812) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -40,13 +40,16 @@ ActiveRecord::Schema.define(:version => 20160326150434) do
     t.string   "title"
     t.text     "description"
     t.string   "location"
-    t.string   "salary"
     t.integer  "category_id"
     t.integer  "user_id"
     t.string   "job_link"
     t.integer  "position"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.integer  "salary_cents",        :default => 0,     :null => false
+    t.string   "salary_currency",     :default => "USD", :null => false
+    t.integer  "salary_end_cents",    :default => 0,     :null => false
+    t.string   "salary_end_currency", :default => "USD", :null => false
   end
 
   create_table "refinery_jobs_categories", :force => true do |t|

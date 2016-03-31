@@ -14,32 +14,44 @@
                 :fields => [:description],
                 :object => "jobs/job" -%>
   </div>
+  
+  <div class="row">
+    <div class='field'>
+      <%= f.label :Department -%>
+      <%= f.collection_select :category_id, Refinery::Jobs::Category.all, :id, :title, :class=>"admin-department" -%>
+    </div>
 
-  <div class='field'>
-    <%= f.label :location -%>
-    <%= f.text_field :location -%>
+    <div class='field'>
+      <%= f.label :location, :class=>"field-titles" -%>
+      <%= f.text_field :location -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :salary_cents -%>
+      <%= f.number_field :salary_cents, :style=>"display:inline-block;"-%> To    
+      <%= f.number_field :salary_end_cents, :style=>"display:inline-block;" -%>
+    </div>
+
+    <div class='field'>
+      <%= f.label :salary_currency -%>
+      <%= f.collection_select :salary_currency, Money::Currency.all, :id, :name -%>
+    </div>
+    
+    <div class='field'>
+      <%= f.hidden_field :salary_end_currency, :input_html => { :value => "#{params[:salary_currency]}" }  -%>
+    </div>
+
+    <!-- <div class='field'> -->
+      <%#= f.label :user_id -%>
+      <%#= f.number_field :user_id -%>
+    <!-- </div> -->
+
+    <div class='field'>
+      <%= f.label :job_link -%>
+      <%= f.text_field :job_link -%>
+    </div>
+
   </div>
-
-  <div class='field'>
-    <%= f.label :salary -%>
-    <%= f.text_field :salary -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :category -%>
-    <%= f.collection_select :category_id, Refinery::Jobs::Category.all, :id, :title -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :user_id -%>
-    <%= f.number_field :user_id -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :job_link -%>
-    <%= f.text_field :job_link -%>
-  </div>
-
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.jobs.admin.jobs.job'),
